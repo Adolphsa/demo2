@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="50dp"
+                  android:background="@drawable/login_shape"
+                  android:gravity="center_vertical"
+        >
+        <Button
+            android:id="@+id/btn_violationQuery_clickback"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_click_change"
+            />
+        <TextView
+            android:id="@+id/textView_carDiagnose_mainmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="违章查询"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="80dp"
+            />
+        <ImageButton
+            android:id="@+id/igb__carDiagnos_choose_car"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/violation_query_add"
+            android:layout_marginLeft="60dp"
+            android:clickable="true"
+            />
+
+    </LinearLayout>
+    <TableLayout android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/login_linearl_shape">
+        <TableRow android:paddingTop="10dp"
+                  android:clickable="true"
+                  android:background="@drawable/violation_query_bg">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/main_my_love_car"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13925275229"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/right_icon"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="15dp"
+                />
+        </TableRow>
+        <View android:layout_width="fill_parent"
+              android:layout_height="1dp"
+              android:background="#EBEBEB"
+            />
+        <TableRow android:paddingTop="10dp"
+                  android:clickable="true"
+                  android:background="@drawable/violation_query_bg">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/main_my_love_car"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="粤BU9072"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/right_icon"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="15dp"
+                />
+        </TableRow>
+        <View android:layout_width="fill_parent"
+              android:layout_height="1dp"
+              android:background="#EBEBEB"
+            />
+        <TableRow android:paddingTop="10dp"
+                  android:clickable="true"
+                  android:background="@drawable/violation_query_bg">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/main_my_love_car"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13480183396"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/right_icon"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="15dp"
+                />
+        </TableRow>
+        <View android:layout_width="fill_parent"
+              android:layout_height="1dp"
+              android:background="#EBEBEB"
+            />
+        <TableRow android:paddingTop="10dp"
+                  android:clickable="true"
+                  android:background="@drawable/violation_query_bg">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/main_my_love_car"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13480198570"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/right_icon"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="15dp"
+                />
+        </TableRow>
+
+
+    </TableLayout>
+
+</LinearLayout>

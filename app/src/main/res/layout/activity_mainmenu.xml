@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="50dp"
+                  android:background="@drawable/login_shape"
+                  android:gravity="center_vertical"
+        >
+        <ImageButton
+            android:id="@+id/igb_mainmenu_call"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/igb_mainmenu_call"
+            android:layout_marginLeft="8dp"
+            />
+        <TextView
+            android:id="@+id/textView_mainmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="路精灵"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="90dp"
+            />
+        <ImageButton
+            android:id="@+id/igb_mainmenu_choose_car"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/igb_mainmenu_choose_car"
+            android:layout_marginLeft="40dp"
+            />
+        <ImageButton
+            android:id="@+id/igb_mainmenu_setting"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/igb_mainmenu_setting"
+
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/picture1"
+        android:scaleType="fitCenter"
+        />
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/btn_mainmenu_myLoveCar"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="我的爱车"
+                android:paddingTop="25dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:drawableLeft="@drawable/main_my_love_car"
+                android:background="@drawable/mainmenu_button"
+                />
+            <View
+                 android:layout_width="1dp"
+                 android:layout_height="fill_parent"
+                 android:background="#EBEBEB" >
+            </View>
+            <Button
+                android:id="@+id/btn_mainmenu_navigation"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="我要去哪"
+                android:paddingTop="25dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="22dp"
+                android:drawableLeft="@drawable/main_navigation"
+                android:background="@drawable/mainmenu_button"
+                />
+
+            </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#EBEBEB" >
+        </View>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/btn_maimenu_carDiagnose"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="车辆诊所"
+                android:paddingTop="25dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:drawableLeft="@drawable/main_car_diagnose"
+                android:background="@drawable/mainmenu_button"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:background="#EBEBEB" >
+            </View>
+            <Button
+                android:id="@+id/btn_mainmenu_violationQuery"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="违章查询"
+                android:paddingTop="25dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:drawableLeft="@drawable/main_violation_query"
+                android:background="@drawable/mainmenu_button"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#EBEBEB" >
+        </View>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/btn_mainmenu_infoQuery"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="信息查询"
+                android:paddingTop="25dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:drawableLeft="@drawable/main_info_query"
+                android:background="@drawable/mainmenu_button"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:background="#EBEBEB" >
+            </View>
+            <Button
+                android:id="@+id/btn_mainmenu_newInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="最新资讯"
+                android:paddingTop="25dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:drawableLeft="@drawable/main_new_info"
+                android:background="@drawable/mainmenu_button"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <TableLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="全部类型"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="进入区域提醒"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="出区域提醒"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="超速提醒"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="剪线提醒"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="低电压提醒"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="碰撞报警"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车辆非法行驶"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车辆开启提醒"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车辆启动提醒"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="怠速超时提醒"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车辆水温过高"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="尾箱开启提醒"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车辆拖吊提醒"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="震动提醒"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="急加速报警"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="急减速报警"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车灯未关提醒"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车辆被盗提醒（车门开启）"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车辆被盗提醒（尾箱开启）"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车辆设防"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车辆撤防"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车辆启动"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车辆熄火"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="设防失败,车门未关"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="设防失败,左前门未关"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="设防失败,右前门未关"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="设防失败,左后门未关"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="设防失败,右后门未关"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="设防成功，小灯未关"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="设防成功，尾箱未关"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="设防失败，小灯未关"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="设防失败，尾箱未关"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车辆启动失败"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车辆熄火失败"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="未锁车提醒"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="未预约提醒"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车窗未关提醒"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="左前车窗未关"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="右前车窗未关"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="左后车窗未关"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="右后车窗未关"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车轮胎压异常"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="左前车轮胎压异常"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="右前车轮胎压异常"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="右前车轮胎压异常"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="右后车轮胎压异常"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="设防失败"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="1dp"
+           android:background="#EBEBEB" >
+       </View>
+       <TableRow android:background="@drawable/violation_query_bg"
+                 android:clickable="true">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="车辆预约未启动"
+               android:layout_marginLeft="25dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:textSize="15sp"
+               android:textColor="#969696"
+               />
+       </TableRow>
+
+   </TableLayout>
+
+</ScrollView>

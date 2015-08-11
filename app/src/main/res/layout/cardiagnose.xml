@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="50dp"
+                  android:background="@drawable/login_shape"
+                  android:gravity="center_vertical"
+        >
+        <Button
+            android:id="@+id/btn_carDiagnose_clickback"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_click_change"
+            />
+        <TextView
+            android:id="@+id/textView_carDiagnose_mainmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车辆诊断"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="80dp"
+            />
+        <ImageButton
+            android:id="@+id/igb__carDiagnos_choose_car"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/igb_mainmenu_choose_car"
+            android:layout_marginLeft="25dp"
+            />
+        <Button
+            android:id="@+id/bt_carDiagnos_history"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="历史"
+            android:textSize="10sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/cardiagnose_history"
+            />
+
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent"
+                    android:layout_height="130dp"
+                    android:background="#F2F2F2"
+                    >
+        <ImageView  android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/cardiagnose_scanning"
+                    android:scaleType="fitCenter"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/img_carDiagnose_scanning"
+                    />
+        <Button android:id="@+id/bt_carDiagnose_phone"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:drawableLeft="@drawable/phone_icon"
+                android:text="咨询"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:paddingLeft="5dp"
+                android:layout_toRightOf="@+id/img_carDiagnose_scanning"
+                android:background="@drawable/car_diagnose_button"
+                />
+        <Button android:id="@+id/bt_carDiagnose_clear"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:text="清码"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="45dp"
+                android:layout_toRightOf="@+id/bt_carDiagnose_phone"
+                android:background="@drawable/car_diagnose_button"
+                />
+        <ImageView  android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cardiagnose_help"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/bt_carDiagnose_clear"
+                    />
+       <ProgressBar
+                android:id="@+id/pb_carDiagnose"
+                android:layout_width="220dp"
+                android:layout_height="15dp"
+                android:max="100"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_toRightOf="@+id/img_carDiagnose_scanning"
+                android:layout_marginTop="90dp"
+                android:layout_marginLeft="20dp"
+           />
+
+    </RelativeLayout>
+
+    <TableLayout android:layout_width="345dp"
+                 android:layout_height="400dp"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginLeft="10dp"
+                 android:shrinkColumns="1"
+                 android:background="@drawable/login_linearl_shape"
+                >
+        <TableRow android:layout_marginTop="5dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:paddingLeft="10dp"
+                  android:paddingBottom="8dp"
+                  android:paddingTop="8dp"
+                  android:clickable="true"
+                  android:background="@drawable/cardiagnose_list"
+                  >
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="燃油和进气系统"
+                      android:textSize="18sp"
+                      />
+            <ImageView
+                      android:layout_width="20dp"
+                      android:layout_height="20dp"
+                      android:layout_marginLeft="40dp"
+                      android:src="@drawable/faultinfo_notice_bg"
+                      />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/right_icon"
+                />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#EBEBEB" >
+        </View>
+        <TableRow android:layout_marginTop="5dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:paddingLeft="10dp"
+                  android:paddingBottom="8dp"
+                  android:paddingTop="8dp"
+                  android:clickable="true"
+                  android:background="@drawable/cardiagnose_list"
+            >
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="点火系统"
+                      android:textSize="18sp"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="40dp"
+                android:src="@drawable/faultinfo_notice_bg"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/right_icon"
+                />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#EBEBEB" >
+        </View>
+        <TableRow android:layout_marginTop="5dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:paddingLeft="10dp"
+                  android:paddingBottom="8dp"
+                  android:paddingTop="8dp"
+                  android:clickable="true"
+                  android:background="@drawable/cardiagnose_list"
+            >
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="辅助排放控制系统"
+                      android:textSize="18sp"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="40dp"
+                android:src="@drawable/faultinfo_notice_bg"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/right_icon"
+                />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#EBEBEB" >
+        </View>
+        <TableRow android:layout_marginTop="5dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:paddingLeft="10dp"
+                  android:paddingBottom="8dp"
+                  android:paddingTop="8dp"
+                  android:clickable="true"
+                  android:background="@drawable/cardiagnose_list"
+            >
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="车速感知，怠速控制相关系统"
+                      android:textSize="18sp"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="40dp"
+                android:src="@drawable/faultinfo_notice_bg"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/right_icon"
+                />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#EBEBEB" >
+        </View>
+        <TableRow android:layout_marginTop="5dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:paddingLeft="10dp"
+                  android:paddingBottom="8dp"
+                  android:paddingTop="8dp"
+                  android:clickable="true"
+                  android:background="@drawable/cardiagnose_list"
+            >
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="控制电脑和辅助输出系统"
+                      android:textSize="18sp"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="40dp"
+                android:src="@drawable/faultinfo_notice_bg"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/right_icon"
+                />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#EBEBEB" >
+        </View>
+        <TableRow android:layout_marginTop="5dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_marginRight="5dp"
+                  android:paddingLeft="10dp"
+                  android:paddingBottom="8dp"
+                  android:paddingTop="8dp"
+                  android:clickable="true"
+                  android:background="@drawable/cardiagnose_list"
+            >
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="变速箱相关系统"
+                      android:textSize="18sp"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="40dp"
+                android:src="@drawable/faultinfo_notice_bg"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/right_icon"
+                />
+        </TableRow>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#EBEBEB" >
+        </View>
+
+
+    </TableLayout>
+
+</LinearLayout>
