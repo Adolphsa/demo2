@@ -2,6 +2,7 @@ package com.dxytech.demo2;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -11,6 +12,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONObject;
 
@@ -19,6 +21,8 @@ import java.util.Map;
 
 //登录界面
 public class MainActivity extends Activity {
+
+    private String TGA = "MainActivity";
 
     private  String userName;
     private  String password;
@@ -38,22 +42,31 @@ public class MainActivity extends Activity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
+        Listener listener= new Listener();
 
+        //注册和忘记密码
         textView_register = (TextView)findViewById(R.id.textView_register);
         textView_password = (TextView)findViewById(R.id.textView_password);
+        textView_register.setOnClickListener(listener);
+        textView_password.setOnClickListener(listener);
 
+        //账号和密码
         edt_account = (EditText)findViewById(R.id.edt_account);
         edt_password = (EditText)findViewById(R.id.edt_password);
 
+        //演示登录和登录
         btn_demoLogin = (Button)findViewById(R.id.btn_demoLogin);
         btn_Login = (Button)findViewById(R.id.btn_Login);
-
-        Listener listener= new Listener();
-
-        textView_register.setOnClickListener(listener);
-        textView_password.setOnClickListener(listener);
         btn_demoLogin.setOnClickListener(listener);
         btn_Login.setOnClickListener(listener);
+
+        //自动填充账号密码
+        Map<String,String> userInfo = new HashMap<String,String>();
+        userInfo = SharePreference.getUserInfo(getApplicationContext());
+        edt_account.setText(userInfo.get("userName"));
+        Log.d(TGA + "--userName", userInfo.get("userName"));
+        edt_password.setText(userInfo.get("password"));
+        Log.d(TGA + "--password", userInfo.get("password"));
     }
     class Listener implements View.OnClickListener{
 
@@ -80,17 +93,26 @@ public class MainActivity extends Activity {
                     break;
                 //登录
                 case R.id.btn_Login:
-                    Log.d("Login", "我被点击了");
+                    Log.d(TGA + "--login", "我被点击了");
                     if (validate()){
                         //登录成功
                         if (loginPro()){
                             //启动到用户界面
-                            Intent intent = new Intent();
-                            intent.setClass(getApplication(),MainMenuActivity.class);
-                            startActivity(intent);
-                            //结束该activity
-                            finish();
+                            try {
+                                String resultGet = HttpUtil.get();
+                                Log.d("MainActivity", resultGet);
+                                Intent intent = new Intent();
+                                intent.setClass(getApplication(),MainMenuActivity.class);
+                                startActivity(intent);
+                                Toast.makeText(getApplicationContext(),"登陆成功",Toast.LENGTH_SHORT).show();
+                                //结束该activity
+                                finish();
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+
                         }else{
+                            Toast.makeText(getApplicationContext(),"账号或密码错误",Toast.LENGTH_SHORT).show();
                             Log.d("Login", "账号或密码错误");
                         }
                     }
@@ -104,12 +126,17 @@ public class MainActivity extends Activity {
         userName = edt_account.getText().toString();
         password = edt_password.getText().toString();
         try {
-            String result = HttpUtil.postTest(userName,password);
-            Log.d("MainActivity",result);
-            JSONObject jsonObject = new JSONObject(result);
-            Log.d("MainActivity",jsonObject.toString());
+            String resultPost = HttpUtil.post(userName, password);
+            Log.d(TGA + "--resultPost",resultPost);
+            JSONObject jsonObject = new JSONObject(resultPost);
+            Log.d(TGA + "--jsonObject",jsonObject.toString());
             if (jsonObject.get("loginstatus").equals("success")){
+                //保存用户数据
+                SharePreference.saveUserInfo(getApplicationContext(),userName,password);
+                Log.d(TGA, "数据保存成功");
                 return true;
+            }else{
+                Toast.makeText(getApplicationContext(),"网络异常",Toast.LENGTH_SHORT).show();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -122,16 +149,16 @@ public class MainActivity extends Activity {
     private boolean validate(){
         userName = edt_account.getText().toString().trim();
         if (userName.equals("")){
-            Log.d("Login","账号是必填项");
+            Log.d(TGA + "--login", "账号是必填项");
+            Toast.makeText(getApplicationContext(),"账号不能为空",Toast.LENGTH_SHORT).show();
             return false;
         }
         password = edt_password.getText().toString().trim();
         if (password.equals("")){
-            Log.d("Login","密码是必填项");
+            Log.d(TGA + "--login","密码是必填项");
+            Toast.makeText(getApplicationContext(),"密码不能为空",Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;
     }
-
-
 }

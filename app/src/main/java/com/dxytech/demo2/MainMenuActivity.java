@@ -81,7 +81,7 @@ public class MainMenuActivity extends Activity {
 
                 //设置
                 case R.id.igb_mainmenu_setting:
-                    Log.d(TGA,"调用设置");
+                    Log.d(TGA,"点击设置");
                     Intent intent_setting = new Intent();
                     intent_setting.setClass(MainMenuActivity.this,Setting.class);
                     startActivity(intent_setting);
@@ -89,7 +89,7 @@ public class MainMenuActivity extends Activity {
 
                 //我的爱车
                 case R.id.btn_mainmenu_myLoveCar:
-                    Log.d(TGA,"调用我的爱车");
+                    Log.d(TGA,"点击我的爱车");
                     Intent intent_myLoveCar = new Intent();
                     intent_myLoveCar.setClass(getApplication(), MyLoveCar.class);
                     startActivity(intent_myLoveCar);

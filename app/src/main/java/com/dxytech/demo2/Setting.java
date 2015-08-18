@@ -33,9 +33,14 @@ public class Setting extends Activity {
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent_logout = new Intent();
-                intent_logout.setClass(getApplication(),MainActivity.class);
-                startActivity(intent_logout);
+                try {
+                    HttpUtil.delete();
+                    Intent intent_logout = new Intent();
+                    intent_logout.setClass(getApplication(),MainActivity.class);
+                    startActivity(intent_logout);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
