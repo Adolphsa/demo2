@@ -38,7 +38,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:background="@drawable/igb_mainmenu_setting"
-
+            android:clickable="true"
             />
 
     </LinearLayout>

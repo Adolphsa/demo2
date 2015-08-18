@@ -3,9 +3,11 @@ package com.dxytech.demo2;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 /**
  * 主界面
@@ -14,7 +16,10 @@ import android.widget.ImageButton;
 
 public class MainMenuActivity extends Activity {
 
+    private String TGA = "MainMenuActivity";
+
     private ImageButton igb_mainmenu_call;
+    private ImageButton igb_mainmenu_setting; //设置
 
 
     private Button btn_mainmenu_myLoveCar;
@@ -38,6 +43,9 @@ public class MainMenuActivity extends Activity {
         igb_mainmenu_call = (ImageButton)findViewById(R.id.igb_mainmenu_call);
         igb_mainmenu_call.setOnClickListener(listener);
 
+        //设置
+        igb_mainmenu_setting = (ImageButton)findViewById(R.id.igb_mainmenu_setting);
+        igb_mainmenu_setting.setOnClickListener(listener);
 
         //我的爱车
         btn_mainmenu_myLoveCar = (Button)findViewById(R.id.btn_mainmenu_myLoveCar);
@@ -71,8 +79,17 @@ public class MainMenuActivity extends Activity {
                     startActivity(intent_mainmenu_call);
                     break;
 
+                //设置
+                case R.id.igb_mainmenu_setting:
+                    Log.d(TGA,"调用设置");
+                    Intent intent_setting = new Intent();
+                    intent_setting.setClass(MainMenuActivity.this,Setting.class);
+                    startActivity(intent_setting);
+                    break;
+
                 //我的爱车
                 case R.id.btn_mainmenu_myLoveCar:
+                    Log.d(TGA,"调用我的爱车");
                     Intent intent_myLoveCar = new Intent();
                     intent_myLoveCar.setClass(getApplication(), MyLoveCar.class);
                     startActivity(intent_myLoveCar);

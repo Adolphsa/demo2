@@ -8,5 +8,7 @@
     <color name="grey"> #D4D4D4</color>
     <color name="yellow1">#EEB422</color>
     <color name="grey2">#EBEBEB</color>
-
+    <color name="setting_pressed">#F0F0F0</color>
+    <color name="setting">#FFF</color>
+    <color name="red">#FF0000</color>
 </resources>

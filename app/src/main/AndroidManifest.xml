@@ -22,6 +22,7 @@
         <activity android:name=".ReturnpwdActivity"/>
         <activity android:name=".MainMenuActivity"/>
         <activity android:name=".MainMenuActivity_call"/>
+        <activity android:name=".Setting"/>
         <activity android:name=".MainMenuActivity_carDiagnose"/>
         <activity android:name=".MainMenuActivity_violation_query"/>
         <activity android:name=".MainMenuActivity_info_query"/>
@@ -29,7 +30,8 @@
                   android:theme="@android:style/Theme.Dialog"/>
         <activity android:name=".Navigation"
                   android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name=".Login"/>
     </application>
     <uses-permission android:name="android.permission.CALL_PHONE"/>
-
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
