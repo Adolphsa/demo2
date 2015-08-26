@@ -14,6 +14,9 @@ import android.widget.Toast;
 
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Administrator on 2015/8/25.
  */
@@ -80,16 +83,45 @@ public class PutUserInfo extends Activity {
     }
 
     public void check(){
+        try {
+            String resultGet = UserInfoUtils.get();
+            JSONObject jsonObject = new JSONObject(resultGet);
+            //密码
+            if (TextUtils.isEmpty(et_put_password.getText())){
+                Map<String,String> map = new HashMap<String,String>();
+                map = SharePreference.getUserInfo(getApplicationContext());
+                put_password = map.get("password");
+                Log.d(TGA + "--check",put_password);
+            }else{
+                put_password = et_put_password.getText().toString().trim();
+            }
 
-        //密码
-        put_password = et_put_password.getText().toString().trim();
-        //姓名
-        put_userName = et_put_userName.getText().toString().trim();
-        //电话
-        put_numphone = et_put_numphone.getText().toString().trim();
-        //邮箱
-        put_email = et_put_email.getText().toString().trim();
-
+            //姓名
+            if (TextUtils.isEmpty(et_put_userName.getText())){
+                //如果为空，取上次的值
+                put_userName = jsonObject.get("realname").toString();
+                Log.d(TGA + "--check",put_userName);
+            }else{
+                //不为空就取当前的值
+                put_userName = et_put_userName.getText().toString().trim();
+            }
+            //电话
+            if (TextUtils.isEmpty(et_put_numphone.getText())){
+                put_numphone = jsonObject.get("phonenumber").toString();
+                Log.d(TGA + "--check",put_numphone);
+            }else{
+                put_numphone = et_put_numphone.getText().toString().trim();
+            }
+            //邮箱
+            if (TextUtils.isEmpty(et_put_email.getText())){
+                put_email = jsonObject.get("phonenumber").toString();
+                Log.d(TGA + "--check",put_email);
+            }else{
+                put_email = et_put_email.getText().toString().trim();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 }
