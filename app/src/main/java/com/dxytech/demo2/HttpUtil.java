@@ -3,23 +3,18 @@ package com.dxytech.demo2;
 import android.util.Log;
 
 import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
 import org.apache.http.cookie.Cookie;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
@@ -31,9 +26,8 @@ public class HttpUtil {
 
     private static String TGA = "HttpUtil";
 
-    private static String PHPSESSID;
+    public static String PHPSESSID;
 
-    public static HttpClient httpClient = new DefaultHttpClient();
     public static final String BASE_URL = "http://api.caowei.name/login";
 
     /**
@@ -54,9 +48,9 @@ public class HttpUtil {
                     jsonObj.put("username",userName);
                     jsonObj.put("password",password);
 
-                    if(null != PHPSESSID){
-                        request.setHeader("Cookie","PHPSESSID=" + PHPSESSID);
-                    }
+//                    if(null != PHPSESSID){
+//                        request.setHeader("Cookie","PHPSESSID=" + PHPSESSID);
+//                    }
 
                     //设置请求参数
                     request.setEntity(new StringEntity(jsonObj.toString()));
@@ -90,7 +84,7 @@ public class HttpUtil {
             }
         });
         new Thread(task).start();
-        Log.d(TGA, task.get());
+        Log.d(TGA + "--taskPost", task.get());
         return task.get();
     }
 
@@ -106,7 +100,7 @@ public class HttpUtil {
                 String reGet = "";
 
                 DefaultHttpClient client = new DefaultHttpClient();
-                HttpGet request = new HttpGet(BASE_URL + "/walker");
+                HttpGet request = new HttpGet(BASE_URL + "/" + MainActivity.userName);
                 request.setHeader("Cookie", "PHPSESSID=" + PHPSESSID);
 
                 try {
@@ -129,7 +123,7 @@ public class HttpUtil {
             }
         });
         new Thread(task).start();
-        Log.d(TGA, task.get());
+        Log.d(TGA + "--taskGet", task.get());
         return task.get();
     }
 
@@ -138,14 +132,14 @@ public class HttpUtil {
      * @return 服务器返回的数据
      * @throws Exception
      */
-    public static String delete()throws Exception{
+    public static String delete(final String username)throws Exception{
         FutureTask<String> task = new FutureTask<String>(new Callable<String>() {
             @Override
             public String call() throws Exception {
                 String reDelete = "";
 
                 HttpClient client = new DefaultHttpClient();
-                HttpDelete delete = new HttpDelete(BASE_URL + "/walker");
+                HttpDelete delete = new HttpDelete(BASE_URL + "/" + username);
                 delete.setHeader("Cookie", "PHPSESSID=" + PHPSESSID);
 
                 try {
@@ -162,7 +156,7 @@ public class HttpUtil {
             }
         });
         new Thread(task).start();
-        Log.d(TGA, task.get());
+        Log.d(TGA + "--taskDelete", task.get());
         return task.get();
     }
 }

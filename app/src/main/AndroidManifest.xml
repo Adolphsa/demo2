@@ -23,6 +23,13 @@
         <activity android:name=".MainMenuActivity"/>
         <activity android:name=".MainMenuActivity_call"/>
         <activity android:name=".Setting"/>
+        <activity android:name=".CarInfoManage"/>
+        <activity android:name=".GetUserInfo"
+                  android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name=".PutUserInfo"
+                  android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name=".DeleteUserInfo"
+                  android:theme="@android:style/Theme.Dialog"/>
         <activity android:name=".MainMenuActivity_carDiagnose"/>
         <activity android:name=".MainMenuActivity_violation_query"/>
         <activity android:name=".MainMenuActivity_info_query"/>
@@ -30,7 +37,8 @@
                   android:theme="@android:style/Theme.Dialog"/>
         <activity android:name=".Navigation"
                   android:theme="@android:style/Theme.Dialog"/>
-        <activity android:name=".Login"/>
+        <activity android:name=".Logout"
+                  android:theme="@android:style/Theme.Dialog"/>
     </application>
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.INTERNET"/>

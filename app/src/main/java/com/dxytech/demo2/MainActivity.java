@@ -2,11 +2,8 @@ package com.dxytech.demo2;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -24,8 +21,9 @@ public class MainActivity extends Activity {
 
     private String TGA = "MainActivity";
 
-    private  String userName;
+    public  static String userName;
     private  String password;
+    private  String passwordMD5;
 
     private EditText edt_account;
     private EditText edt_password;
@@ -41,6 +39,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+
+        Logout_Manager.getInstance().addActivity(this);
 
         Listener listener= new Listener();
 
@@ -126,7 +126,9 @@ public class MainActivity extends Activity {
         userName = edt_account.getText().toString();
         password = edt_password.getText().toString();
         try {
-            String resultPost = HttpUtil.post(userName, password);
+            passwordMD5 = MD5.getMD5(password);
+            Log.d(TGA + "--passwordMD5",passwordMD5);
+            String resultPost = HttpUtil.post(userName, passwordMD5);
             Log.d(TGA + "--resultPost",resultPost);
             JSONObject jsonObject = new JSONObject(resultPost);
             Log.d(TGA + "--jsonObject",jsonObject.toString());

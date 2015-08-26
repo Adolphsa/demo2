@@ -136,10 +136,32 @@
                 android:layout_marginBottom="15dp"
                 />
             <EditText
-                android:id="@+id/edt_register_numohone"
+                android:id="@+id/edt_register_numphone"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:hint="请输入您的手机号码"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:paddingLeft="5dp"
+                android:inputType="phone"
+                android:background="@drawable/login_edt_shape"
+                />
+        </TableRow>
+        <TableRow android:gravity="center_vertical" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电子邮箱"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                />
+            <EditText
+                android:id="@+id/edt_register_email"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:hint="可选"
                 android:layout_marginLeft="10dp"
                 android:textSize="20sp"
                 android:paddingLeft="5dp"
@@ -151,37 +173,39 @@
             android:layout_height="1dp"
             android:background="#EBEBEB" >
         </View>
-        <TableRow android:gravity="center_vertical">
+        <TableRow android:gravity="center_vertical" >
             <TextView
-                android:id="@+id/tv_register_idfcode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="验 证 码"
+                android:text="姓名"
                 android:textSize="20sp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 />
             <EditText
-                android:id="@+id/edt_register_idfcode"
+                android:id="@+id/edt_register_realname"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:hint="输入验证码"
+                android:hint="请输入您的姓名"
                 android:layout_marginLeft="10dp"
                 android:textSize="20sp"
                 android:paddingLeft="5dp"
                 android:background="@drawable/login_edt_shape"
                 />
         </TableRow>
-
-
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#EBEBEB" >
+        </View>
     </TableLayout>
     <Button
         android:id="@+id/btn_register_ok"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="完成"
-        android:background="@drawable/login_shape"
+        android:background="@drawable/demologin"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="15dp"

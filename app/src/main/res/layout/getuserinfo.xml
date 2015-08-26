@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="350dp"
+android:layout_height="wrap_content"
+android:background="@drawable/login_linearl_shape">
+<TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    <TableRow android:background="@drawable/login_shape">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="帐号信息"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="120dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            />
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/close_change"
+            android:layout_marginLeft="60dp"
+            android:clickable="true"
+            />
+    </TableRow>
+</TableLayout>
+<TableLayout
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    >
+    <TableRow
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="帐号:"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            />
+    </TableRow>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#EBEBEB" >
+    </View>
+    <TableRow
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名:"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/tv_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            />
+    </TableRow>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#EBEBEB" >
+    </View>
+    <TableRow
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电话号码:"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/tv_numphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            />
+    </TableRow>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#EBEBEB" >
+    </View>
+    <TableRow
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email:"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            />
+    </TableRow>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#EBEBEB"
+        android:layout_marginBottom="10dp">
+    </View>
+
+</TableLayout>
+
+</LinearLayout>

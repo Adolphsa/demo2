@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        >
+        <RadioButton
+            android:id="@+id/choose_car_first"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="粤BU2266"
+            android:paddingLeft="40dp"
+            android:clickable="true"
+            />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            />
+        <RadioButton
+            android:id="@+id/choose_car_second"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="13925275229"
+            android:paddingLeft="40dp"
+            android:clickable="true"
+            />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            />
+        <RadioButton
+            android:id="@+id/choose_car_three"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="13925275229"
+            android:paddingLeft="40dp"
+            android:clickable="true"
+            />
+    </RadioGroup>
+
+
+</LinearLayout>

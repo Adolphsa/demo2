@@ -1,13 +1,23 @@
 package com.dxytech.demo2;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.PopupWindow;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 /**
  * 主界面
@@ -20,6 +30,7 @@ public class MainMenuActivity extends Activity {
 
     private ImageButton igb_mainmenu_call;
     private ImageButton igb_mainmenu_setting; //设置
+    private ImageButton igb_mainmenu_choose_car; //选择车
 
 
     private Button btn_mainmenu_myLoveCar;
@@ -37,6 +48,8 @@ public class MainMenuActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainmenu);
 
+        Logout_Manager.getInstance().addActivity(this);
+
         listener = new Listener();
 
         //一键呼叫
@@ -46,6 +59,10 @@ public class MainMenuActivity extends Activity {
         //设置
         igb_mainmenu_setting = (ImageButton)findViewById(R.id.igb_mainmenu_setting);
         igb_mainmenu_setting.setOnClickListener(listener);
+
+        //选择车
+        igb_mainmenu_choose_car =(ImageButton)findViewById(R.id.igb_mainmenu_choose_car);
+        igb_mainmenu_choose_car.setOnClickListener(listener);
 
         //我的爱车
         btn_mainmenu_myLoveCar = (Button)findViewById(R.id.btn_mainmenu_myLoveCar);
@@ -87,6 +104,56 @@ public class MainMenuActivity extends Activity {
                     startActivity(intent_setting);
                     break;
 
+                //选择车
+                case R.id.igb_mainmenu_choose_car:
+
+                    View choose_car = getLayoutInflater().inflate(R.layout.choose_car,null);
+                    //popupWindow里面的控件
+                    final RadioButton choose_car_first = (RadioButton)choose_car.findViewById(R.id.choose_car_first);
+                    RadioButton choose_car_sencod = (RadioButton)choose_car.findViewById(R.id.choose_car_second);
+                    RadioButton choose_car_three = (RadioButton)choose_car.findViewById(R.id.choose_car_three);
+
+                    final PopupWindow popupWindow = new PopupWindow(choose_car,330,300);
+
+                    //可触摸
+                    popupWindow.setTouchable(true);
+                    //可聚焦
+                    popupWindow.setFocusable(true);
+                    // 设置允许在外点击消失
+                    popupWindow.setOutsideTouchable(true);
+
+                    //设置背景
+                    popupWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.login_linearl_shape));
+                    popupWindow.setTouchInterceptor(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View v, MotionEvent event) {
+                            return false;
+                        }
+                    });
+                    Log.d("popupWindow", "显示popupWindow");
+                    popupWindow.showAsDropDown(igb_mainmenu_choose_car, -2, 5);
+                    Log.d("popupWindow", "显示popupWindow2");
+
+                    class ChooseCar implements View.OnClickListener{
+
+                        @Override
+                        public void onClick(View v) {
+                            Log.d("popupWindow","被点击");
+                            boolean aa = choose_car_first.isChecked();
+                            if (aa){
+                                Log.d("popupWindow","ture");
+                            }else{
+                                Log.d("popupWindow","false");
+                            }
+                            popupWindow.dismiss();
+                        }
+                    }
+                    //控件的监听事件
+                    choose_car_first.setOnClickListener(new ChooseCar());
+                    choose_car_sencod.setOnClickListener(new ChooseCar());
+                    choose_car_three.setOnClickListener(new ChooseCar());
+                    break;
+
                 //我的爱车
                 case R.id.btn_mainmenu_myLoveCar:
                     Log.d(TGA,"点击我的爱车");
@@ -125,5 +192,15 @@ public class MainMenuActivity extends Activity {
         }
     }
 
+    //按返回键弹出退出对话框
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK){
+            Intent intent_logout = new Intent();
+            intent_logout.setClass(getApplication(),Logout.class);
+            startActivity(intent_logout);
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
 }
