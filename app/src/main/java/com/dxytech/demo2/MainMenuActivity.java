@@ -19,6 +19,8 @@ import android.widget.PopupWindow;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.igexin.sdk.PushManager;
+
 /**
  * 主界面
  * Created by Administrator on 2015/6/16.

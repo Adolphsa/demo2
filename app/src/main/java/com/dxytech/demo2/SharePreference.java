@@ -42,9 +42,10 @@ public class SharePreference {
      * @return 用户信息
      */
     public static Map<String,String> getUserInfo(Context context){
-        SharedPreferences preferences = context.getSharedPreferences("userInfo",Context.MODE_PRIVATE);
+        SharedPreferences preferences = context.getSharedPreferences("userInfo", Context.MODE_PRIVATE);
         String userName  = preferences.getString("userName", null);
         String password = preferences.getString("password",null);
+        Boolean isFirst = preferences.getBoolean("isFirst",true);
 
         if (!TextUtils.isEmpty(userName) && !TextUtils.isEmpty(password)){
             Map<String,String> userInfoMap = new HashMap<String,String>();

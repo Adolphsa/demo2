@@ -1,8 +1,11 @@
 package com.dxytech.demo2;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -10,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.igexin.sdk.PushManager;
 
 import org.json.JSONObject;
 
@@ -40,6 +45,9 @@ public class MainActivity extends Activity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
+        //个推
+        PushManager.getInstance().initialize(this.getApplicationContext());
+
         Logout_Manager.getInstance().addActivity(this);
 
         Listener listener= new Listener();
@@ -61,12 +69,21 @@ public class MainActivity extends Activity {
         btn_Login.setOnClickListener(listener);
 
         //自动填充账号密码
-        Map<String,String> userInfo = new HashMap<String,String>();
-        userInfo = SharePreference.getUserInfo(getApplicationContext());
-        edt_account.setText(userInfo.get("userName"));
-        Log.d(TGA + "--userName", userInfo.get("userName"));
-        edt_password.setText(userInfo.get("password"));
-        Log.d(TGA + "--password", userInfo.get("password"));
+        SharedPreferences preferences =getSharedPreferences("userInfo",Context.MODE_PRIVATE);
+        Boolean b = preferences.getBoolean("isFirst",false);
+        Log.d("第一次登录",b.toString());
+        if (preferences.getBoolean("isFirst",false)) {
+            Map<String, String> userInfo = new HashMap<String, String>();
+            userInfo = SharePreference.getUserInfo(getApplicationContext());
+
+            edt_account.setText(userInfo.get("userName"));
+            Log.d(TGA + "--userName", userInfo.get("userName"));
+            edt_password.setText(userInfo.get("password"));
+            Log.d(TGA + "--password", userInfo.get("password"));
+        }else{
+            preferences.edit().putBoolean("isFirst", true).commit();
+        }
+
     }
     class Listener implements View.OnClickListener{
 
@@ -163,4 +180,10 @@ public class MainActivity extends Activity {
         }
         return true;
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
 }

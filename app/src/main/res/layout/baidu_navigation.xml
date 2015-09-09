@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:theme="@android:style/Theme.Translucent"
+    android:layout_height="match_parent">
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+    <LinearLayout
+        android:id="@+id/ll"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_shape"
+        >
+        <Button
+            android:id="@+id/btn_clickback"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:background="@drawable/btn_click_change"
+            />
+        <TextView
+            android:id="@id/textView_register"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="导航"
+            android:textSize="25dp"
+            android:drawablePadding="100dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="100dp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sreach"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bt_navigation_searchview"
+        android:hint="请输入目的地"
+        android:clickable="true"
+        android:textColor="@color/grey"
+        android:textSize="20sp"
+        android:drawableLeft="@drawable/icon_search"
+        android:drawablePadding="10dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="3dp"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/ll"
+        />
+    <RelativeLayout
+        android:id="@+id/ZoomControlView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20.0dip"
+        android:layout_marginRight="5.0dip">
+        <Button
+            android:id="@+id/zoomin"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:background="@drawable/zoomin_seletor" />
+        <Button
+            android:id="@+id/zoomout"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_below="@+id/zoomin"
+            android:background="@drawable/zoomout_seletor" />
+    </RelativeLayout>
+
+</RelativeLayout>
