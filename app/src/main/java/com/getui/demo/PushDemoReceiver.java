@@ -27,6 +27,7 @@ public class PushDemoReceiver extends BroadcastReceiver {
                 // String appid = bundle.getString("appid");
                 byte[] payload = bundle.getByteArray("payload");
 
+
                 String taskid = bundle.getString("taskid");
                 String messageid = bundle.getString("messageid");
 
