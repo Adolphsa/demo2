@@ -182,6 +182,7 @@
                 android:background="@drawable/setting_background"
                 >
                 <LinearLayout
+                    android:id="@+id/ll_videoPlayer"
                     android:layout_width="fill_parent"
                     android:layout_height="45dp"
                     android:layout_margin="2dp"

@@ -28,4 +28,5 @@ dependencies {
     compile files('libs/IndoorscapeAlbumPlugin.jar')
     compile files('libs/GetuiSDK2.6.1.0.jar')
     compile files('libs/json_simple-1.1.jar')
+    compile project(':h264Android')
 }

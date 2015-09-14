@@ -7,15 +7,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import h264.com.H264Android;
+
 /**
  * Created by Administrator on 2015/8/13.
  */
 public class Setting extends Activity {
 
-    private LinearLayout ll_carInfoManage;
+    private LinearLayout ll_carInfoManage; //账号管理
 
     private Button btn_clickback; //返回
     private Button btn_logout; //退出当前账户
+
+    private LinearLayout ll_videoPlayer; //播放器
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +35,7 @@ public class Setting extends Activity {
             }
         });
 
-        //车辆管理
+        //账号管理
         ll_carInfoManage = (LinearLayout)findViewById(R.id.ll_carInfoManage);
         ll_carInfoManage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +43,17 @@ public class Setting extends Activity {
                 Intent intent_carInfoManage = new Intent();
                 intent_carInfoManage.setClass(getApplication(),CarInfoManage.class);
                 startActivity(intent_carInfoManage);
+            }
+        });
+
+        //播放器
+        ll_videoPlayer = (LinearLayout)findViewById(R.id.ll_videoPlayer);
+        ll_videoPlayer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(getApplication(), H264Android.class);
+                startActivity(intent);
             }
         });
 
