@@ -7,7 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import h264.com.H264Android;
+
+import io.vov.vitamio.activity.InitActivity;
 
 /**
  * Created by Administrator on 2015/8/13.
@@ -52,7 +53,7 @@ public class Setting extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(getApplication(), H264Android.class);
+                intent.setClass(getApplication(), InitActivity.class);
                 startActivity(intent);
             }
         });
